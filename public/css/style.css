@@ -36,6 +36,13 @@ body h1 {
   width: 15%;
 }
 
+#pokeball-logo{
+  align-self: center;
+  width: 5%;
+  margin-top: -2%;
+  margin-bottom: 1%;
+}
+
 #menu {
   display: flex;
   flex-direction: row;
