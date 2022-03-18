@@ -46,4 +46,4 @@ app.get("/index", (req, res) => {
     res.render("../views/index.ejs");
 });
 
-app.listen(port, () => console.log(`O Servidor Pokedex está rodando na ${port}.`));
+app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}.`));
