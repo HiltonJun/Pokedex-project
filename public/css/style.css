@@ -20,7 +20,13 @@ body{
     justify-content: center;
 }
 
+#logo{
+    align-self: center;
+    
+}
+
 body h1 {
+    color: brown;
     background-color: brown;
     padding: 1% 1%;
     font-family: 'Sarpanch', sans-serif;
