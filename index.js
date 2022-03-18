@@ -38,10 +38,6 @@ const pokedex = [{
     "Categoria": "Cobra",
     "Habilidade": "Shed Skin, Intimidate"}];
 
-app.get('/', (req,res) => {
-    res.send('Pokedex');
-});
-
 app.get("/index", (req, res) => {
     res.render("../views/index.ejs");
 });
