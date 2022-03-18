@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#top-container{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: brown;
+    width: 100%;
+    justify-content: center;
+}
+
+body h1 {
+    background-color: brown;
+    padding: 1% 1%;
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 50px;
+}
+
+#menu a {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    padding: 1% 1%;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Sarpanch', sans-serif;
+    font-size: larger;
+}
+
+a{
+    display: contents;
+    background-color:rgb(221, 62, 41);
+    width: 50px;
+    height: 5vh;
+}
