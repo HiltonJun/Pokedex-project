@@ -37,7 +37,6 @@ body h1 {
 }
 
 #menu {
-  color: whitesmoke;
   display: flex;
   flex-direction: row;
   background-color: rgb(221, 62, 41);
@@ -48,12 +47,14 @@ body h1 {
   width: 100%;
   text-align: center;
   text-decoration: none;
-  font-family: "Sarpanch", sans-serif;
-  font-size: larger;
 }
 
 a {
   display: contents;
+  color: whitesmoke;
+  font-family: "Sarpanch", sans-serif;
+  font-size: larger;
   width: 50px;
   height: 5vh;
+  margin: 20px;
 }
