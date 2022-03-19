@@ -18,5 +18,17 @@
         <a href="/Cadastro/">Cadastro</a>
         <a href="/detalhes/">Detalhes</a>
     </nav>
+
+    <article id="content">
+        <h3>Pokemon</h3>
+        <ul>
+            <% pokedex.forEach(pokemon => { %>
+                <li><%= pokemon.Nome %></li>
+                <li><%= pokemon.Número %></li>
+                <li><%= pokemon.Imagem %></li>
+            <% }) %> 
+
+        </ul>
+
 </body>
 </html>
