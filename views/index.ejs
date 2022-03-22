@@ -19,7 +19,7 @@
     </header>
     <nav id="menu">
       <a href="/home/">Home</a>
-      <a href="/Cadastro/">Cadastro</a>
+      <a href="/cadastro/">Cadastro</a>
       <a href="/detalhes/">Detalhes</a>
     </nav>
 
@@ -28,16 +28,17 @@
 			<% pokedex.forEach((pokemon) => { %>	
 				<div class="pokemon-card">
 					<div class="card-front">
-						<h3><% pokemon.numero %></h3>
+						<h3><%= pokemon.id %></h3>
+						<h3><%= pokemon.numero %></h3>
 						<img src="/img/card-logo.png" alt="card-logo" />
 					</div>
 					<div class="card-back">
-						<h3><% pokemon.nome %></h3>
-						<img src="<% pokemon.imagem %>" alt="pokémon-img" />
+						<h3><%= pokemon.nome %></h3>
+						<img src="<%= pokemon.imagem %>" alt="pokémon-img" />
 					</div>
-					<a href="/update/<% pokemon.numero %>">Editar</a>
+					<a href="/update/<%= pokemon.numero %>">Editar</a>
 				</div>
-			}) %>
+			<% }) %>
 			</section>
 
 			<section id="container-cadastro">

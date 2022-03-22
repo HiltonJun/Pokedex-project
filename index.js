@@ -9,6 +9,7 @@ app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, "public")));
 
 const pokedex = [{
+    id:'1',
     numero: "613",
     nome: "Cubchoo",
     tipo: "Ice",
@@ -19,7 +20,7 @@ const pokedex = [{
     categoria: "Chill",
     habilidade: "Snow Cloak, Slush Rush"
 }, {
-
+    id:'2',
     numero: "614",
     nome: "Beartic",
     tipo: "Ice",
@@ -30,7 +31,7 @@ const pokedex = [{
     categoria: "Freezing",
     habilidade: "Snow Cloak, Slush Rush"
 }, {
-
+    id:'3',
     numero: "024",
     nome: "Arbok",
     tipo: "Poison",
@@ -43,7 +44,7 @@ const pokedex = [{
 }];
 
 app.get("/", (req, res) => {
-    res.render("../views/index.ejs", { pokedex });
+    res.render("../views/index.ejs", { pokedex:pokedex });
 });
 
 app.get("/home", (req, res) => {
@@ -56,7 +57,7 @@ app.get("/detalhes", (req, res) => {
 
 app.post("/create", (req, res) => {
     const pokemon = req.body;
-    pokemon.numero = pokedex.length + 1;
+    pokemon.id = pokedex.length + 1;
     pokedex.push(pokemon);
     console.log(pokemon);
     res.redirect("/");
