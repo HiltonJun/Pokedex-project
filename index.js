@@ -9,38 +9,41 @@ app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, "public")));
 
 const pokedex = [{
-    Número: "613",
-    Nome: "Cubchoo",
-    Tipo:"Ice",
-    Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/613.png",
-    Descrição: "When this Pokémon is in good health, its snot becomes thicker and stickier. It will smear its snot on anyone it doesn’t like.",
-    Altura: "0.5 m",
-    Peso: "8.5 kg",
-    Categoria: "Chill",
-    Habilidade: "Snow Cloak, Slush Rush"},{
+    numero: "613",
+    nome: "Cubchoo",
+    tipo: "Ice",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/613.png",
+    descricao: "When this Pokémon is in good health, its snot becomes thicker and stickier. It will smear its snot on anyone it doesn’t like.",
+    altura: "0.5 m",
+    peso: "8.5 kg",
+    categoria: "Chill",
+    habilidade: "Snow Cloak, Slush Rush"
+}, {
 
-    Número: "614",
-    Nome: "Beartic",
-    Tipo:"Ice",
-    Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/614.png",
-    Descrição: "It swims through frigid seas, searching for prey. From its frozen breath, it forms icy fangs that are harder than steel.",
-    Altura: "2.6 m",
-    Peso: "260.0 kg",
-    Categoria: "Freezing",
-    Habilidade: "Snow Cloak, Slush Rush"},{
+    numero: "614",
+    nome: "Beartic",
+    tipo: "Ice",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/614.png",
+    descricao: "It swims through frigid seas, searching for prey. From its frozen breath, it forms icy fangs that are harder than steel.",
+    altura: "2.6 m",
+    peso: "260.0 kg",
+    categoria: "Freezing",
+    habilidade: "Snow Cloak, Slush Rush"
+}, {
 
-    Número: "024",
-    Nome: "Arbok",
-    Tipo:"Poison",
-    Imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png",
-    Descrição: "It swims through frigid seas, searching for prey. From its frozen breath, it forms icy fangs that are harder than steel.",
-    Altura: "3.5 m",
-    Peso: "65 kg",
-    Categoria: "Cobra",
-    Habilidade: "Shed Skin, Intimidate"}];
+    numero: "024",
+    nome: "Arbok",
+    tipo: "Poison",
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png",
+    descricao: "It swims through frigid seas, searching for prey. From its frozen breath, it forms icy fangs that are harder than steel.",
+    altura: "3.5 m",
+    peso: "65 kg",
+    categoria: "Cobra",
+    habilidade: "Shed Skin, Intimidate"
+}];
 
 app.get("/", (req, res) => {
-    res.render("../views/index.ejs", {pokedex: pokedex});
+    res.render("../views/index.ejs", { pokedex });
 });
 
 app.get("/home", (req, res) => {
@@ -49,6 +52,20 @@ app.get("/home", (req, res) => {
 
 app.get("/detalhes", (req, res) => {
     res.render("../views/index.ejs");
+});
+
+app.post("/create", (req, res) => {
+    const pokemon = req.body;
+    pokemon.numero = pokedex.length + 1;
+    pokedex.push(pokemon);
+    console.log(pokemon);
+    res.redirect("/");
+});
+
+app.get("/update/:numero", (req, res) => {
+    const numero = Number(req.params.numero);
+    const pokemon = pokedex.find(pokemon => pokemon.numero === numero);
+    res.render("/cadastro", { pokemon, pokedex });
 });
 
 app.get("/cadastro", (req, res) => {

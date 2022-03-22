@@ -9,6 +9,9 @@
 body {
   display: flex;
   flex-wrap: wrap;
+  background-image: url("/img/background-index-body.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #top-container {
@@ -48,10 +51,8 @@ body h1 {
   background-color: rgb(221, 62, 41);
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
   padding: 1% 1%;
   width: 100%;
-  text-align: center;
   text-decoration: none;
 }
 
@@ -62,5 +63,20 @@ a {
   font-size: larger;
   width: 50px;
   height: 5vh;
-  margin: 20px;
+  margin-right: 10%;
+}
+
+.card-front{
+  background-color: black;
+  border: 1px solid silver;
+}
+
+.card-front img{
+  align-self: center;
+  width: 10%;
+}
+
+.card-front h3{
+  align-self: center;
+  font-size: xx-large;
 }
