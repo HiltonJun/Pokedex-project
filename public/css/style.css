@@ -81,3 +81,29 @@ a {
   font-size: xx-large;
   color: whitesmoke;
 }
+
+/*--- cadastro ---*/
+
+
+main{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#container-cadastro{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(22, 21, 21, 0.7);
+  margin: 1% 5%;
+}
+
+.form .lbl{
+  display: flex;
+  flex-direction: column;
+}
+
+.form .field{
+  display: flex;
+  justify-items: right;
+}
