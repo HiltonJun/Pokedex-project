@@ -25,9 +25,9 @@
 
 		<main>
 			<section id="container-cadastro">
-				<h2>Cadastre um novo Pokemón!</h2>
+				<h2>Cadastre um Novo POKEMÓN!</h2>
                 <div class="form">
-                    <form action="/create" method="POST">
+                    <form action="/create" id="createForm" method="POST">
                         <label for="nome" class="lbl">Nome:</label>
                         <input type="text" class="field" name="nome">
     
@@ -43,13 +43,13 @@
                         <label for="altura" class="lbl">Altura:</label>
                         <input type="text" class="field" name="altura">
     
-                        <label for="peso">Peso:</label>
+                        <label for="peso" class="lbl">Peso:</label>
                         <input type="text" class="field" name="peso">
     
-                        <label for="categoria">Categoria:</label>
+                        <label for="categoria" class="lbl">Categoria:</label>
                         <input type="text" class="field" name="categoria">
                         
-                        <label for="habilidade">Habilidade:</label>
+                        <label for="habilidade" class="lbl">Habilidade:</label>
                         <input type="text" class="field" name="habilidade">
                         <button id="btn-cadastrar" type="submit">Cadastrar</button>
                     </form>
