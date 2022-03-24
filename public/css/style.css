@@ -83,11 +83,6 @@ a {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-.card-front img {
-  width: 80%;
-  z-index: 1;
-=======
 .card-front h3{
   align-self: center;
   font-size: xx-large;
@@ -169,5 +164,4 @@ main{
   font-size: 18px;
   font-weight: 500;
 
->>>>>>> c86e77ee9c4778dd20ac88a2ea1aeab5ed7de5be
 }
