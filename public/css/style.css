@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarpanch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sarpanch&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sarpanch&family=Titillium+Web:wght@200&display=swap');
+
 
 * {
   margin: 0;
@@ -81,7 +83,91 @@ a {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .card-front img {
   width: 80%;
   z-index: 1;
+=======
+.card-front h3{
+  align-self: center;
+  font-size: xx-large;
+  color: whitesmoke;
+}
+
+/*--- cadastro ---*/
+
+
+main{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 1%;
+
+}
+
+#container-cadastro{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(29, 27, 27, 0.5);
+  margin: 1% 15%;
+  border-radius: 25px;
+  width: 70%;
+}
+
+#container-cadastro h2{
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 2px;
+  color: #ffce31;
+  text-align: center;
+
+}
+
+.form{
+  position: relative;
+  width: 60%;
+  margin-left: 32.5%;
+  padding: 2% 0%;
+}
+.form .lbl{
+  display: flex;
+  flex-direction: column;
+  color: rgb(199, 199, 199);
+  font-family: "Sarpanch", sans-serif;
+  padding: 0.5% 0%;
+}
+
+.form .field{
+  position: relative;
+  align-items: flex-end;
+  width: 60%;
+  height: 1.2rem;
+  background-color: rgba(155, 155, 155, 0.5);
+  color: whitesmoke;
+  text-indent: 0.5em;
+  border-radius: 10px;
+  
+}
+
+.field:focus {
+  color: #ffce31;
+  outline: none;
+}
+
+#btn-cadastrar{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border-style: none;
+  color: rgb(199, 199, 199);
+  background-color: rgba(155, 155, 155, 0.5);
+  margin: 3% 22%;
+  width: 20%;
+  height: 4.5vh;
+  overflow: hidden;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+>>>>>>> c86e77ee9c4778dd20ac88a2ea1aeab5ed7de5be
 }

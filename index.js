@@ -43,36 +43,52 @@ const pokedex = [{
     habilidade: "Shed Skin, Intimidate"
 }];
 
-app.get("/", (req, res) => {
-    res.render("../views/index.ejs", { pokedex:pokedex });
-});
-
+let pokemon = undefined;
+// Rotas
 app.get("/home", (req, res) => {
-    res.render("../views/index.ejs");
-});
-
-app.get("/detalhes", (req, res) => {
-    res.render("../views/index.ejs");
-});
-
-app.post("/create", (req, res) => {
-    const pokemon = req.body;
-    pokemon.id = pokedex.length + 1;
-    pokedex.push(pokemon);
-    console.log(pokemon);
-    res.redirect("/");
-});
-
-app.get("/update/:numero", (req, res) => {
-    const numero = Number(req.params.numero);
-    const pokemon = pokedex.find(pokemon => pokemon.numero === numero);
-    res.render("/cadastro", { pokemon, pokedex });
+  res.render("index", { pokedex, pokemon });
 });
 
 app.get("/cadastro", (req, res) => {
-    res.render("../views/index.ejs");
+    res.render("cadastro", { pokedex, pokemon });
+  });
+
+app.get("/detalhes", (req, res) => {
+    res.render("detalhes", { pokedex, pokemon });
+  });
+
+app.post("/create", (req, res) => {
+  const pokemon = req.body;
+  pokemon.id = pokedex.length + 1;
+  pokedex.push(pokemon);
+  res.redirect("/home");
+  res.redirect("/#cards");
 });
 
+app.get("/detalhes/:id", (req, res) => {
+  const id = Number(req.params.id);
+  pokemon = pokedex.find((pokemon) => pokemon.id === id);
+  res.redirect("/home");
+  res.redirect("/cadastro");
+});
 
+app.post("/update/:id", (req, res) => {
+  const id = +req.params.id - 1;
+  const newPokemon = req.body;
+  newPokemon.id = id + 1
+  newPokemon.id = id + 1;
+  pokedex[id] = newPokemon;
+  pokemon = undefined;
+  res.redirect("/home");
+  res.redirect("/#cards");
+
+});
+
+app.get("/delete/:id", (req, res) => {
+  const id = +req.params.id - 1;
+  delete pokedex[id]
+
+  res.redirect("/#cards");
+});
 
 app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}.`));
