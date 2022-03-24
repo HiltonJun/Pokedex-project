@@ -53,6 +53,10 @@ app.get("/cadastro", (req, res) => {
     res.render("cadastro", { pokedex, pokemon });
   });
 
+app.get("/detalhes", (req, res) => {
+    res.render("detalhes", { pokedex, pokemon });
+  });
+
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
