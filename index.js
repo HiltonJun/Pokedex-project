@@ -72,7 +72,7 @@ app.get("/detalhes/:id", (req, res) => {
   res.redirect("/cadastro");
 });
 
-app.post("/update/:id", (req, res) => {
+app.post("/editar/:id", (req, res) => {
   const id = +req.params.id - 1;
   const newPokemon = req.body;
   newPokemon.id = id + 1
