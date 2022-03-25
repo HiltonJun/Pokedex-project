@@ -73,15 +73,10 @@ app.get("/detalhes/:id", (req, res) => {
 });
 
 app.post("/editar/:id", (req, res) => {
-  const id = +req.params.id - 1;
-  const newPokemon = req.body;
-  newPokemon.id = id + 1
-  newPokemon.id = id + 1;
-  pokedex[id] = newPokemon;
-  pokemon = undefined;
+  const id = Number(req.params.id);
+  pokemon = pokedex.find((pokemon) => pokemon.id === id);
   res.redirect("/home");
-  res.redirect("/#cards");
-
+  res.redirect("/cadastro");
 });
 
 app.get("/delete/:id", (req, res) => {
@@ -91,4 +86,4 @@ app.get("/delete/:id", (req, res) => {
   res.redirect("/#cards");
 });
 
-app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}.`));
+app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/home/.`));
