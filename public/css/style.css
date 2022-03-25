@@ -14,6 +14,7 @@
   background-image: url("/img/background-index-body.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 .cadastro-body{
@@ -80,7 +81,30 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 10%;
+}
 
+.carousel-container img{
+  width: 225px;
+}
+
+.carousel-container h3{
+  align-self: center;
+  font-size: xx-large;
+  color: whitesmoke;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 100px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .card-front {
@@ -88,18 +112,24 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: -35%;
+  max-width: 225px;
+  background-color: rgb(39, 38, 38);
+  border: 2px solid silver;
+  border-top-left-radius: 20px;
 }
 
-.card-front img{
-  width: 50%;
+.card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -35%;
+  max-width: 225px;
+  background-color: rgb(39, 38, 38);
+  border: 2px solid silver;
+  border-top-right-radius: 20px;
 }
-
-.card-front h3{
-  align-self: center;
-  font-size: xx-large;
-  color: whitesmoke;
-}
-
 /*--- cadastro ---*/
 
 

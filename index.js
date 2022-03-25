@@ -97,4 +97,4 @@ app.get("/delete/:id", (req, res) => {
   res.redirect("/#cards");
 });
 
-app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/home.`));
+app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/home/.`));
