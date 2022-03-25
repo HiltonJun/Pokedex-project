@@ -177,7 +177,7 @@ main{
   align-items: flex-end;
   width: 60%;
   height: 1.2rem;
-  background-color: rgba(155, 155, 155, 0.5);
+  background-color: rgba(255, 215, 155, 0.5);
   color: whitesmoke;
   text-indent: 0.5em;
   border-radius: 10px;
@@ -196,7 +196,7 @@ main{
   border-radius: 12px;
   border-style: none;
   color: rgb(199, 199, 199);
-  background-color: rgba(155, 155, 155, 0.5);
+  background-color: rgba(255, 155, 155, 0.5);
   margin: 3% 22%;
   width: 20%;
   height: 4.5vh;
