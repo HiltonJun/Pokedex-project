@@ -297,7 +297,7 @@ body {
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.flip-card-back{
+.card-back{
   width: 380px;
   min-height: 600px;
   background-color: black;
@@ -309,19 +309,19 @@ body {
   transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.flip-card-front{
+.card-front{
   transform: rotateY(0deg);
 }
 
-.flip-card-back{
+.card-back{
   position: absolute;
   top: 0;
   left: 0;
   transform: rotateY(180deg);
 }
 
-.flip-card-front::after,
-.flip-card-back::after{
+.card-front::after,
+.card-back::after{
   content: "";
   width: 100%;
   height: 100%;
@@ -332,8 +332,8 @@ body {
   opacity: 0.6;
 }
 
-.flip-card-front .inner,
-.flip-card-back .inner{
+.card-front .inner,
+.card-back .inner{
   width: 100%;
   padding: 40px;
   position: absolute;
@@ -368,10 +368,10 @@ padding-bottom: 7%;
 
 }
 
-.flip-card:hover .flip-card-front{
+.pokemon-card:hover .card-front{
   transform: rotateY(-180deg);
 }
 
-.flip-card:hover .flip-card-back{
+.pokemon-card:hover .card-back{
   transform: rotateY(0deg);
 }
