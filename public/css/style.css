@@ -114,7 +114,7 @@ main{
 #container-cadastro{
   display: flex;
   flex-direction: column;
-  background-color: rgba(29, 27, 27, 0.5);
+  background-color: rgba(29, 27, 27, 0.7);
   margin: 1% 15%;
   border-radius: 25px;
   width: 70%;
@@ -174,5 +174,59 @@ main{
   font-family: "Sarpanch", sans-serif;
   font-size: 18px;
   font-weight: 500;
+}
 
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+}
+
+.top,
+.bottom {
+  height: 45px;
+  width: 90px;
+  filter: drop-shadow(5px 10px 8px rgb(82, 82, 82));
+}
+
+
+.top {
+  background-color: red;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+}
+
+
+.bottom {
+
+  background-color: white;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+}
+
+
+.rotate {
+  -webkit-animation: 2s linear infinite rotate;
+          animation: 2s linear infinite rotate;
+  position: relative;
+  top: -45px;
+  transform-origin: 50% 100%;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

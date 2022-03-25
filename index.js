@@ -56,6 +56,15 @@ app.get("/cadastro", (req, res) => {
 app.get("/detalhes", (req, res) => {
     res.render("detalhes", { pokedex, pokemon });
   });
+app.get("/test", (req, res) => {
+    res.render("test", { pokedex, pokemon });
+  });
+
+app.get("/editar/:id", (req, res) => {
+    const idPokemon = +req.params.id;
+    pokemon = pokedex.find((pokemon) => pokemon.id == idPokemon);
+    res.render("editar", { pokedex:pokedex, pokemon:pokemon });
+});
 
 app.post("/create", (req, res) => {
   const pokemon = req.body;
@@ -73,15 +82,12 @@ app.get("/detalhes/:id", (req, res) => {
 });
 
 app.post("/editar/:id", (req, res) => {
-  const id = +req.params.id - 1;
+  const index = +req.params.id - 1;
   const newPokemon = req.body;
-  newPokemon.id = id + 1
-  newPokemon.id = id + 1;
-  pokedex[id] = newPokemon;
+  newPokemon.id = pokedex[index].id;
+  pokedex[index] = newPokemon;
   pokemon = undefined;
   res.redirect("/home");
-  res.redirect("/#cards");
-
 });
 
 app.get("/delete/:id", (req, res) => {
@@ -91,4 +97,4 @@ app.get("/delete/:id", (req, res) => {
   res.redirect("/#cards");
 });
 
-app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}.`));
+app.listen(port, () => console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/home.`));

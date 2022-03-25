@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Atualização do Pokemon</h2>
+        <form action="/editar/<%=pokemon.id%>" method="POST">
+        <label for="nome" class="lbl">Nome:</label>
+        <input type="text" id="nome" name="nome" value="<%= pokemon.nome %>"required>
+      
+        <label for="numero" class="lbl">Número:</label>
+        <input type="text" id="numero" name="numero" value="<%= pokemon.numero%>"required>
+      
+        <label for="tipo" class="lbl">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo %>"required>
+      
+        <label for="imagem" class="lbl">Link da Imagem:</label>
+        <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>"required>
+                    
+        <label for="descricao" class="lbl">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao %>"required>
+                    
+        <label for="altura" class="lbl">Altura:</label>
+        <input type="text" id="altura" name="altura" value="<%= pokemon.altura %>"required>
+                  
+        <label for="peso" class="lbl">Peso:</label>
+        <input type="text" id="peso" name="peso" value="<%= pokemon.peso %>"required>
+      
+        <label for="categoria" class="lbl">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" value="<%= pokemon.categoria %>"required>
+      
+        <label for="habilidade" class="lbl">Habilidade:</label>
+        <input type="text" id="habilidade" name="habilidade" value="<%= pokemon.habilidade %>"required>
+                    
+                  <div class="ball">
+                    <button id="btn-Editar" type="submit">Editar</button>
+                  </div>  
+                </form>
+
+      </div>
+</body>
+</html>
