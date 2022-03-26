@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Pokedex</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <title>Pokedex</title>
-</head>
-
-<body class="cadastro-body">
-  <header id="top-container">
-    <h1 id="header">Pokédex</h1>
-    <img id="pokedex-logo" src="/img/Pokédex_logo.png" alt="pokédex logo" />
-    <img id="pokeball-logo" src="/img/pokeball-logo.png" alt="pokeball-logo" />
-  </header>
-  <nav id="menu">
-    <a href="/home/">Home</a>
-    <a href="/cadastro/">Cadastro</a>
-  </nav>
-
-  <main>
-    <section id="container-cadastro">
-      <h2>Cadastre um Novo POKEMÓN!</h2>
-      <div class="form">
-        <form action="/create" id="createForm" method="POST">
-          <label for="nome" class="lbl">Nome:</label>
-          <input type="text" class="field" name="nome">
-
-          <label for="numero" class="lbl">Número:</label>
-          <input type="text" class="field" name="numero">
-
-          <label for="tipo" class="lbl">Tipo:</label>
-          <input type="text" class="field" name="tipo">
-
-          <label for="imagem" class="lbl">Link da Imagem:</label>
-          <input type="text" class="field" name="imagem">
-
-          <label for="descricao" class="lbl">Descrição:</label>
-          <input type="text" class="field" name="descricao">
-
-          <label for="altura" class="lbl">Altura:</label>
-          <input type="text" class="field" name="altura">
-
-          <label for="peso" class="lbl">Peso:</label>
-          <input type="text" class="field" name="peso">
-
-          <label for="categoria" class="lbl">Categoria:</label>
-          <input type="text" class="field" name="categoria">
-
-          <label for="habilidade" class="lbl">Habilidade:</label>
-          <input type="text" class="field" name="habilidade">
-
-          <div class="ball">
-            <button id="btn-cadastrar" type="submit">Cadastrar</button>
-          </div>
-        </form>
+  <body class="cadastro-body">
+    <header id="top-container">
+      <h1 id="header">Pokédex</h1>
+      <img id="pokedex-logo" src="/img/Pokédex_logo.png" alt="pokédex logo" />
+      <img
+        id="pokeball-logo"
+        src="/img/pokeball-logo.png"
+        alt="pokeball-logo"
+      />
+    </header>
+    <nav class="menu">
+      <div>
+        <a href="/home/">Home</a>
       </div>
-    </section>
-  </main>
-</body>
+      <div>
+        <a href="/cadastro/">Cadastro</a>
+      </div>
+    </nav>
+    <main>
+      <section id="container-cadastro">
+        <h2>Cadastre um Novo POKEMÓN!</h2>
+        <div class="form">
+          <form action="/create" id="createForm" method="POST">
+            <label for="nome" class="lbl">Nome:</label>
+            <input type="text" class="field" name="nome" />
 
+            <label for="numero" class="lbl">Número:</label>
+            <input type="text" class="field" name="numero" />
+
+            <label for="tipo" class="lbl">Tipo:</label>
+            <input type="text" class="field" name="tipo" />
+
+            <label for="imagem" class="lbl">Link da Imagem:</label>
+            <input type="text" class="field" name="imagem" />
+
+            <label for="descricao" class="lbl">Descrição:</label>
+            <input type="text" class="field" name="descricao" />
+
+            <label for="altura" class="lbl">Altura:</label>
+            <input type="text" class="field" name="altura" />
+
+            <label for="peso" class="lbl">Peso:</label>
+            <input type="text" class="field" name="peso" />
+
+            <label for="categoria" class="lbl">Categoria:</label>
+            <input type="text" class="field" name="categoria" />
+
+            <label for="habilidade" class="lbl">Habilidade:</label>
+            <input type="text" class="field" name="habilidade" />
+
+            <div class="ball">
+              <button id="btn-cadastrar" type="submit">Cadastrar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
-

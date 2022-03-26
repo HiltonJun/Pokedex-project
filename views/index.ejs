@@ -18,7 +18,7 @@
         alt="pokeball-logo"
       />
     </header>
-    <nav id="menu">
+    <nav class="menu">
       <div>
         <a href="/home/">Home</a>
       </div>
@@ -30,8 +30,8 @@
     <main>
       <section class="carousel-container">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a href="/detalhes">
         <% pokedex.forEach((pokemon)=> { %>
+        <a href="/detalhes/<%= pokemon.id %>">
           <div class="pokemon-card" id="<%= pokemon.id %>">
             <div class="card-front">
               <img src="/img/front-bg.png" id="front-bg" alt="" />
@@ -54,8 +54,8 @@
               <h3><%= pokemon.nome %></h3>
             </div>
           </div>
-          <% }) %>
         </a>
+        <% }) %>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
     </main>

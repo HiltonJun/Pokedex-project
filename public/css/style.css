@@ -23,6 +23,12 @@
   background-size: cover;
 }
 
+.detalhes-body{
+  background-image: url("/img/black-texture-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #top-container {
   display: flex;
   flex-direction: column;
@@ -54,17 +60,21 @@ body h1 {
   margin-bottom: 1%;
 }
 
-#menu {
+.menu {
   display: flex;
   flex-direction: row;
   background-color: rgb(221, 62, 41);
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding: 1% 1%;
   width: 100%;
   text-decoration: none;
 }
 
+.menu div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 a {
   display: contents;
   color: whitesmoke;
@@ -358,4 +368,67 @@ body {
 
 .pokemon-card:hover .card-back {
   transform: rotateY(0deg);
+}
+
+/* Detalhes */
+
+.section-detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#header-detalhes {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+}
+
+#header-detalhes {
+margin-right: 20px;
+}
+
+
+#texto-descrição{
+  max-width: 300px;
+  margin: 30px;
+  color: whitesmoke;
+}
+#imagem-detalhes{
+  display: flex;
+  flex-direction: row;
+}
+#imagem-detalhes img {
+  max-width: 430px;
+  min-width: 430px;
+  max-height: 430px;
+  min-height: 430px;
+}
+
+#card-atributos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0280AD;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.card-conteudo{
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+}
+
+#tipo-detalhes{
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#btn-editar{
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  background-color: brown;
 }
