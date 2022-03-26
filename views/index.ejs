@@ -19,38 +19,46 @@
       />
     </header>
     <nav id="menu">
-      <a href="/home/">Home</a>
-      <a href="/cadastro/">Cadastro</a>
-      <a href="/detalhes/">Detalhes</a>
+      <div>
+        <a href="/home/">Home</a>
+      </div>
+      <div>
+        <a href="/cadastro/">Cadastro</a>
+      </div>
     </nav>
 
     <main>
       <section class="carousel-container">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a href="/detalhes">
         <% pokedex.forEach((pokemon)=> { %>
-        <div class="pokemon-card" id="<%= pokemon.id %>">
-          <div class="card-front">
-            <img src="/img/front-bg.png" id="front-bg" alt="">
-            <div class="inner">
-              <div id="numero">
-                <h3><%= pokemon.numero %></h3>
-                <img src="/img/card-logo.png" class="icon" alt="card-logo" />
+          <div class="pokemon-card" id="<%= pokemon.id %>">
+            <div class="card-front">
+              <img src="/img/front-bg.png" id="front-bg" alt="" />
+              <div class="inner">
+                <div id="numero">
+                  <h3><%= pokemon.numero %></h3>
+                  <img src="/img/card-logo.png" class="icon" alt="card-logo" />
+                </div>
               </div>
-              
             </div>
-
-          </div>
-          <div class="card-back">
-            <div id="tipo">
-              <h3><%= pokemon.tipo%></h3>
+            <div class="card-back">
+              <div id="tipo">
+                <h3><%= pokemon.tipo%></h3>
+              </div>
+              <img
+                src="<%= pokemon.imagem %>"
+                id="pokeImg"
+                alt="pokemon-imagem"
+              />
+              <h3><%= pokemon.nome %></h3>
             </div>
-            <img src="<%= pokemon.imagem %>" id="pokeImg" alt="pokemon-imagem">
-            <h3><%= pokemon.nome %></h3>
           </div>
-        </div>
-        <% }) %>
+          <% }) %>
+        </a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </section>
     </main>
+    <script src="/js/script.js"></script>
   </body>
 </html>

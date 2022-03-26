@@ -20,24 +20,12 @@
     <nav id="menu">
       <a href="/home/">Home</a>
       <a href="/cadastro/">Cadastro</a>
-      <a href="/detalhes/">Detalhes</a>
     </nav>
 
-		<main>
-			<section class="carousel-container">
-			<% pokedex.forEach((pokemon) => { %>	
-				<div class="pokemon-card">
-					<div class="card-back">
-                        <h3>Altura:<%= pokemon.altura %></h3>
-						<h3>Peso:<%= pokemon.peso %></h3>
-						<h3>Categoria:<%= pokemon.categoria %></h3>
-						<h3>Habilidade:<%= pokemon.habilidade %></h3>
-						<h3>Descrição:<%= pokemon.descricao %></h3>
-					</div>
-					<a href="/editar/<%= pokemon.id %>">Editar</a>
-				</div>
-			<% }) %>
-			</section>
-		</main>
-	</body>
+    <main>
+      <div>
+        <a href="/editar/<%= pokemon.id %>">Editar</a>
+      </div>
+    </main>
+  </body>
 </html>
