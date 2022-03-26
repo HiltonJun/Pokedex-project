@@ -30,10 +30,15 @@
         <% pokedex.forEach((pokemon)=> { %>
         <div class="pokemon-card" id="<%= pokemon.id %>">
           <div class="card-front">
-            <div id="numero">
-              <h3><%= pokemon.numero %></h3>
+            <img src="/img/front-bg.png" id="front-bg" alt="">
+            <div class="inner">
+              <div id="numero">
+                <h3><%= pokemon.numero %></h3>
+                <img src="/img/card-logo.png" class="icon" alt="card-logo" />
+              </div>
+              
             </div>
-            <img src="/img/pokemon-card-back.png" alt="card-logo" />
+
           </div>
           <div class="card-back">
             <div id="tipo">
