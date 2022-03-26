@@ -21,3 +21,12 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+function displayImg() {
+  const show = document.getElementById("display-img");
+  const imgUrl = document.getElementById("url").value;
+  let img = document.createElement("img");
+  img.src = imgUrl;
+  show.appendChild(img);
+}
+
