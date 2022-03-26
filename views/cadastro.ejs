@@ -24,6 +24,7 @@
   <main>
     <section id="container-cadastro">
       <h2>Cadastre um Novo POKEMÓN!</h2>
+      <div id="display-img"></div>
       <div class="form">
         <form action="/create" id="createForm" method="POST">
           <label for="nome" class="lbl">Nome:</label>
@@ -36,7 +37,7 @@
           <input type="text" class="field" name="tipo">
 
           <label for="imagem" class="lbl">Link da Imagem:</label>
-          <input type="text" class="field" name="imagem">
+          <input type="text" class="field" id="url" name="imagem" placeholder="url" onfocusout="displayImg()">
 
           <label for="descricao" class="lbl">Descrição:</label>
           <input type="text" class="field" name="descricao">
@@ -61,6 +62,7 @@
       </div>
     </section>
   </main>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

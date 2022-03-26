@@ -143,7 +143,7 @@ main{
 
 #container-cadastro{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: rgba(29, 27, 27, 0.7);
   margin: 1% 15%;
   border-radius: 25px;
@@ -155,7 +155,13 @@ main{
   letter-spacing: 2px;
   color: #ffce31;
   text-align: center;
+}
 
+#container-cadastro #display_img{
+  justify-content: left;
+  align-items: center;
+  background-position: center;
+  background-size:10%;
 }
 
 .form{
