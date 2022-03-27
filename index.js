@@ -56,7 +56,10 @@ let message = "";
 
 // Rotas
 app.get("/", (req, res) => {
-  res.render("index", { pokedex, pokemon, message, });
+  setTimeout(() => {
+    message = "";
+  }, 1000);
+  res.render("index", { pokedex, pokemon, message });
 });
 
 app.get("/cadastro", (req, res) => {
@@ -77,7 +80,7 @@ app.get("/editar/:id", (req, res) => {
 
 app.post("/create", (req, res) => {
   const pokemon = req.body;
-  const {nome} = req.body;
+  const { nome } = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
   message = `O Pokémon ${nome} foi cadastrado com sucesso!`;
@@ -94,7 +97,5 @@ app.post("/editar/:id", (req, res) => {
 });
 
 app.listen(port, () =>
-  console.log(
-    `O Servidor Pokedex está rodando na http://localhost:${port}/.`
-  )
+  console.log(`O Servidor Pokedex está rodando na http://localhost:${port}/.`)
 );
