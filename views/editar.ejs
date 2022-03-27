@@ -7,42 +7,62 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="cadastro-body">
+  <header id="top-container">
+    <h1 id="header">Pokédex</h1>
+    <img id="pokedex-logo" src="/img/Pokédex_logo.png" alt="pokédex logo" />
+    <img
+      id="pokeball-logo"
+      src="/img/pokeball-logo.png"
+      alt="pokeball-logo"
+    />
+  </header>
+  <nav class="menu">
     <div>
-        <h2>Atualização do Pokemon</h2>
-        <form action="/editar/<%=pokemon.id%>" method="POST">
-        <label for="nome" class="lbl">Nome:</label>
-        <input type="text" id="nome" name="nome" value="<%= pokemon.nome %>"required>
-      
-        <label for="numero" class="lbl">Número:</label>
-        <input type="text" id="numero" name="numero" value="<%= pokemon.numero%>"required>
-      
-        <label for="tipo" class="lbl">Tipo:</label>
-        <input type="text" id="tipo" name="tipo" value="<%= pokemon.tipo %>"required>
-      
-        <label for="imagem" class="lbl">Link da Imagem:</label>
-        <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>"required>
-                    
-        <label for="descricao" class="lbl">Descrição:</label>
-        <input type="text" id="descricao" name="descricao" value="<%= pokemon.descricao %>"required>
-                    
-        <label for="altura" class="lbl">Altura:</label>
-        <input type="text" id="altura" name="altura" value="<%= pokemon.altura %>"required>
-                  
-        <label for="peso" class="lbl">Peso:</label>
-        <input type="text" id="peso" name="peso" value="<%= pokemon.peso %>"required>
-      
-        <label for="categoria" class="lbl">Categoria:</label>
-        <input type="text" id="categoria" name="categoria" value="<%= pokemon.categoria %>"required>
-      
-        <label for="habilidade" class="lbl">Habilidade:</label>
-        <input type="text" id="habilidade" name="habilidade" value="<%= pokemon.habilidade %>"required>
-                    
-                  <div class="ball">
-                    <button id="btn-Editar" type="submit">Editar</button>
-                  </div>  
-                </form>
+      <a href="/home/">Home</a>
+    </div>
+    <div>
+      <a href="/cadastro/">Cadastro</a>
+    </div>
+  </nav>
+  <main>
+    <section id="container-cadastro">
+      <h2>Atualização do Pokémon</h2>
+      <div class="form">
 
+        <form action="/editar/<%=pokemon.id%>" id="createForm" method="POST">
+          <label for="nome" class="lbl">Nome:</label>
+          <input type="text" id="nome" class="field" name="nome" value="<%= pokemon.nome %>"required>
+      
+          <label for="numero" class="lbl">Número:</label>
+          <input type="text" id="numero" class="field" name="numero" value="<%= pokemon.numero%>"required>
+      
+          <label for="tipo" class="lbl">Tipo:</label>
+          <input type="text" id="tipo" class="field" name="tipo" value="<%= pokemon.tipo %>"required>
+      
+          <label for="imagem" class="lbl">Link da Imagem:</label>
+          <input type="text" id="imagem" class="field" name="imagem" value="<%= pokemon.imagem %>"required>
+                    
+          <label for="descricao" class="lbl">Descrição:</label>
+          <input type="text" id="descricao" class="field" name="descricao" value="<%= pokemon.descricao %>"required>
+                    
+          <label for="altura" class="lbl">Altura:</label>
+          <input type="text" id="altura" class="field" name="altura" value="<%= pokemon.altura %>"required>
+                  
+          <label for="peso" class="lbl">Peso:</label>
+          <input type="text" id="peso" class="field" name="peso" value="<%= pokemon.peso %>"required>
+      
+          <label for="categoria" class="lbl">Categoria:</label>
+          <input type="text" id="categoria" class="field" name="categoria" value="<%= pokemon.categoria %>"required>
+      
+          <label for="habilidade" class="lbl">Habilidade:</label>
+          <input type="text" id="habilidade" class="field" name="habilidade" value="<%= pokemon.habilidade %>"required>
+                    
+          <div class="ball">
+            <button id="btn-cadastrar" type="submit">Editar</button>
+          </div>  
+        </form>
       </div>
+    </main>
 </body>
 </html>

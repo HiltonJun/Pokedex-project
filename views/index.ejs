@@ -26,7 +26,11 @@
         <a href="/cadastro/">Cadastro</a>
       </div>
     </nav>
-
+    <% if(message != "") {  %>
+      <section id="message">
+          <p><%= message %></p> <span id="close">&times;</span>
+      </section>
+    <% }  %>
     <main>
       <section class="carousel-container">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

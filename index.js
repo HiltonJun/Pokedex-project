@@ -51,9 +51,11 @@ const pokedex = [
 ];
 
 let pokemon = undefined;
+let message = "";
+
 // Rotas
 app.get("/home", (req, res) => {
-  res.render("index", { pokedex, pokemon });
+  res.render("index", { pokedex, pokemon, message, });
 });
 
 app.get("/cadastro", (req, res) => {
@@ -74,17 +76,11 @@ app.get("/editar/:id", (req, res) => {
 
 app.post("/create", (req, res) => {
   const pokemon = req.body;
+  const {nome} = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
+  message = `O Pokémon ${nome} foi cadastrado com sucesso!`;
   res.redirect("/home");
-  res.redirect("/#cards");
-});
-
-app.get("/detalhes/:id", (req, res) => {
-  const id = Number(req.params.id);
-  pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.redirect("/home");
-  res.redirect("/cadastro");
 });
 
 app.post("/editar/:id", (req, res) => {
@@ -93,13 +89,6 @@ app.post("/editar/:id", (req, res) => {
   newPokemon.id = pokedex[index].id;
   pokedex[index] = newPokemon;
   pokemon = undefined;
-  res.redirect("/home");
-});
-
-app.get("/delete/:id", (req, res) => {
-  const id = +req.params.id - 1;
-  delete pokedex[id];
-
   res.redirect("/home");
 });
 
