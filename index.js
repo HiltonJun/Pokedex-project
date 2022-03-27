@@ -81,7 +81,7 @@ app.post("/create", (req, res) => {
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
   message = `O Pokémon ${nome} foi cadastrado com sucesso!`;
-  res.redirect("/home");
+  res.redirect("/");
 });
 
 app.post("/editar/:id", (req, res) => {
@@ -90,7 +90,7 @@ app.post("/editar/:id", (req, res) => {
   newPokemon.id = pokedex[index].id;
   pokedex[index] = newPokemon;
   pokemon = undefined;
-  res.redirect("/home");
+  res.redirect("/");
 });
 
 app.listen(port, () =>
