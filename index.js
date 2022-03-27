@@ -54,7 +54,7 @@ let pokemon = undefined;
 let message = "";
 
 // Rotas
-app.get("/index", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("index", { pokedex, pokemon, message, });
 });
 
