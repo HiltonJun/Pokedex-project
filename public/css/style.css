@@ -10,7 +10,7 @@
 .home-body {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("../public/img/background-index-body.jpg");
+  background-image: url("/img/background-index-body.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,13 +18,13 @@
 .cadastro-body {
   display: flex;
   flex-wrap: wrap;
-  background-image: url("../public/img/black-texture-background.jpg");
+  background-image: url("/img/black-texture-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .detalhes-body{
-  background-image: url("../public/img/black-texture-background.jpg");
+  background-image: url("/img/black-texture-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
