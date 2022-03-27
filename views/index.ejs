@@ -20,10 +20,10 @@
     </header>
     <nav class="menu">
       <div>
-        <a href="/home/">Home</a>
+        <a href="#home">Home</a>
       </div>
       <div>
-        <a href="/cadastro/">Cadastro</a>
+        <a href="#cadastro">Cadastro</a>
       </div>
     </nav>
     <% if(message != "") {  %>
@@ -35,7 +35,7 @@
       <section class="carousel-container">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <% pokedex.forEach((pokemon)=> { %>
-        <a href="./detalhes/<%= pokemon.id %>">
+        <a href="#detalhes/<%= pokemon.id %>">
           <div class="pokemon-card" id="<%= pokemon.id %>">
             <div class="card-front">
               <img src="./img/front-bg.png" id="front-bg" alt="" />

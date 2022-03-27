@@ -55,7 +55,7 @@ let pokemon = undefined;
 let message = "";
 
 // Rotas
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", { pokedex, pokemon, message, });
 });
 
@@ -95,6 +95,6 @@ app.post("/editar/:id", (req, res) => {
 
 app.listen(port, () =>
   console.log(
-    `O Servidor Pokedex está rodando na http://localhost:${port}/home/.`
+    `O Servidor Pokedex está rodando na http://localhost:${port}/.`
   )
 );
